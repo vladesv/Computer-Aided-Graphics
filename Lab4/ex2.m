@@ -1,0 +1,9 @@
+figure(); 
+subplot(2,2,1); 
+plot(x,y_sin); 
+subplot(2,2,2); 
+plot(x,y_cos); 
+subplot(2,2,3); 
+plot(x,y_sq); 
+subplot(2,2,4); 
+plot(x,y_tr); 
