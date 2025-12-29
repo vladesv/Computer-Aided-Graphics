@@ -1,0 +1,26 @@
+% Charging of a capacitor. The input voltage is a rectangular pulse with an amplitude of 5V 
+%and a width of 0.5s. If C = 10μF, plot the output voltage, v0(t), for resistance R equal to (a) 1000 Ω, and 
+%(b) 10,000 Ω. The plots should start from zero seconds and end at 1.5 seconds.
+
+c = 10.0e-6; r1 = 2500; 
+[v1,t1] = rceval(r1,c); 
+r2 = 10000; [v2,t2] = rceval(r2,c); 
+plot(t1,v1,'*', t2,v2,'+') 
+axis([0 1 0 6]) 
+title('Response of an RC circuit to pulse input') 
+xlabel('Time, s') 
+ylabel('Voltage, V') 
+text(0.55,5.5,'* is for 2500 Ohms') 
+text(0.55,5.0, '+ is for 10000 Ohms') 
+
+close all; 
+Fig=figure('Name','Sine Function',... 
+'Units','normalized',... 
+'Position',[0.3 0.3 0.6 0.6],... 
+'Color',[0.5 0.5 0.9],... 
+'NumberTitle','off'); 
+uicontrol('Style','pushbutton',...  
+'Units','normalized',... 
+'Position',[0.91 0.02 0.1 0.04],... 
+'String','CLOSE',...
+'Callback','close'); 
